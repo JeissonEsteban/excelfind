@@ -1,0 +1,55 @@
+ 
+ <div class="panel panel-default sample-show-hide" ng-repeat="element in obj.elemento.lista">
+        <div class="panel-heading">
+        	<div class="row">
+        		<div class="col-xs-4 col-sm-7 col-md-7">
+        			 {{element.nombre}}
+        		</div>
+        		<div class="col-xs-3 col-sm-2 col-md-2">
+        			<button class="btn btn-info btn-xs btn-block" ng-click="func.showDiv(element,'info')">Info</button>
+        		</div>
+        		<div class="col-xs-3 col-sm-2 col-md-2">
+        			<button class="btn btn-warning btn-xs btn-block" ng-click="func.showDiv(element,'comm')">Comment</button>
+        		</div>
+        		<div class="col-xs-2 col-sm-1 col-md-1"> 
+        			<a href="javascript:void(0);" ng-click="func.addLike(element)" class="{{element.like.state==true?'like-on':'like-off'}}"><i class="fa fa-heart"></i> {{element.like.cant}}</a>
+        		</div>
+        	</div>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+           <div class="col-xs-8 col-sm-8 col-md-8">
+              <h2>Excel 2016</h2>
+             <img src="http://i0.wp.com/cms-images.idgesg.net/images/article/2015/01/excel_ui_900x530-100564289-orig.png?w=648&ssl=1" class="img-responsive"/>
+              <a class="btn btn-link" href="http://www.microsofttrends.com/2015/03/16/key-features-coming-in-excel-2016-for-business-intelligence/">Ref: http://www.microsofttrends.com/2015/03/16/key-features-coming-in-excel-2016-for-business-intelligence/</a>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 informacion sample-show-hide" ng-if="element.info==true">
+            	Categoria: {{element.categoria.nombre}}<br />
+            	Creado por: {{element.creador}}<br />
+            	Fecha: {{element.fecha}}
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 comentario sample-show-hide" ng-if="element.comm==true">
+            	<div class="row">
+            		<div class="col-xs-12 col-sm-12 col-md-12">
+            			<h4>Comentarios:</h4>
+            			<hr />
+            		</div>
+        		</div>
+        		<div class="row">
+            		<div class="col-xs-4 col-sm-4 col-md-4">
+            			<div class="row">
+            				<div class="col-xs-6 col-sm-6 col-md-6 text-left"><p>@jeisson</p></div>
+            				<div class="col-xs-4 col-sm-4 col-md-4 text-right"><p>01.01.2015</p></div>
+            			</div>
+            			<div class="row">
+            				<div></div>
+            			</div>
+            		</div>
+            	</div>
+            	
+            </div>
+
+          </div>
+         
+        </div>
+ </div>
